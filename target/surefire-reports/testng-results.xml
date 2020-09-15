@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="28714" started-at="2020-03-05T08:36:47Z" finished-at="2020-03-05T08:37:16Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@5419f379]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="CookieAcceptance" duration-ms="28714" started-at="2020-03-05T08:36:47Z" finished-at="2020-03-05T08:37:16Z">
+      <class name="runner.TestRunner">
+        <test-method status="PASS" signature="setUpScenario(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.TestRunner@5419f379]" name="setUpScenario" is-config="true" duration-ms="53" started-at="2020-03-05T14:06:47Z" finished-at="2020-03-05T14:06:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[QA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.johnlewis.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpScenario -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@5419f379]" name="setUpClass" is-config="true" duration-ms="352" started-at="2020-03-05T14:06:47Z" finished-at="2020-03-05T14:06:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@5419f379]" name="feature" duration-ms="27696" started-at="2020-03-05T14:06:48Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-05T14:07:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Create Entity View And Upload functionality]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@5419f379]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2020-03-05T14:07:16Z" finished-at="2020-03-05T14:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:runner.TestRunner@5419f379]" name="generateReport" is-config="true" duration-ms="505" started-at="2020-03-05T14:07:16Z" finished-at="2020-03-05T14:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- CookieAcceptance -->
+  </suite> <!-- Suite -->
+</testng-results>
