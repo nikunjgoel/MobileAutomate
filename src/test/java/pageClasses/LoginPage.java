@@ -48,6 +48,8 @@ public class LoginPage extends TestBase {
 	public WebElement incorrectpwd;
 	@AndroidFindBy(xpath = Constants.inCorrectemailCrossicon)
 	public WebElement crossbutton;
+	@AndroidFindBy(xpath = Constants.alreadySignnIN)
+	public WebElement SignInButton;
 
 	/**
 	 * Author: nikgoel1 Login Page
@@ -60,12 +62,13 @@ public class LoginPage extends TestBase {
 	 */
 	public void login(String UserName, String Password) {
 		try {
+			webDriverWaitAndClick(SignInButton);
 			sendKeys(email, UserName);
 			webDriverWaitAndClick(continuebutton);
 			sendKeys(password, Password);
-			webDriverWaitAndClick(LoginButton);
+		    webDriverWaitAndClick(LoginButton);
 			test.log(LogStatus.PASS,
-					"User " + UserName + " credentials on login page are entered and hit Login button successfully");
+					"User " + UserName + "successfully Login into Amazon Application");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			test.log(LogStatus.FAIL,
@@ -85,6 +88,7 @@ public class LoginPage extends TestBase {
 			String validPassword) {
 		try {
 			test.log(LogStatus.INFO, "Entering user credentials on login page and hitting Login button");
+			webDriverWaitAndClick(SignInButton);
 			sendKeys(email, invalidUserName);
 			webDriverWaitAndClick(continuebutton);
 			assertTrue(isElementDisplayed(incorrectemail));
@@ -94,6 +98,9 @@ public class LoginPage extends TestBase {
 			assertTrue(isElementDisplayed(incorrectphone));
 			webDriverWaitAndClick(crossbutton);
 			Log.info("Validate Invalid email workflow");
+			test.log(LogStatus.PASS,
+					"Validate Invalid email workflow");
+		
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			Log.info(e.getMessage());
@@ -120,6 +127,9 @@ public class LoginPage extends TestBase {
 			webDriverWaitAndClick(LoginButton);
 			assertTrue(isElementDisplayed(incorrectpwd));
 			Log.info("Validate invalid password flow successfully");
+			test.log(LogStatus.PASS,
+					"Validate invalid password flow successfully");
+	
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			Log.info(e.getMessage());

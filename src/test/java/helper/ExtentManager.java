@@ -17,7 +17,7 @@ public class ExtentManager {
 			_extent.loadConfig(new File(Config.reportConfigFilePath));
 
 			_extent.addSystemInfo("Selenium Version", "2.52.0").addSystemInfo("Cucumber Version", "1.2.5") 
-					.addSystemInfo("Environment", Config.Environment)
+					.addSystemInfo("Environment", "Android")
 					.addSystemInfo("Host Name", "EDTeam");
 		}
 

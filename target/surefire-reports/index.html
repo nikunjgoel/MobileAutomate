@@ -145,14 +145,11 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;CookieAcceptance&quot;&gt;
-    &lt;parameter name=&quot;siteUrl&quot; value=&quot;https://www.johnlewis.com/&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;env&quot; value=&quot;QA&quot;/&gt;
+  &lt;test name=&quot;Amazon&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.TestRunner&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- CookieAcceptance --&gt;
+  &lt;/test&gt; &lt;!-- Amazon --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CookieAcceptance (1 class)</span>
+                <span class="test-name">Amazon (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,12 +199,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 27696);
+data.setCell(0, 3, 173133);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,13 +231,9 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUpScenario(chrome, QA, https://www.johnlewis.com/)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">58 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(Create Entity View And Upload functionality)</span>
@@ -248,12 +241,8 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28201 ms</span>
+                <span class="method-start">173639 ms</span>
               </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">generateReport</span>
-                <span class="method-start">28206 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

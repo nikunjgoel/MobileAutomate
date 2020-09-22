@@ -79,7 +79,8 @@ public class SearchPage extends TestBase {
 			producttype.size();
 			System.out.println(producttype.get(0).getAttribute("text").toString());
 			product = producttype.get(0).getAttribute("text").toString();
-		} catch (Exception | AssertionError e) {
+			test.log(LogStatus.PASS,"Search TV product successfully");
+				} catch (Exception | AssertionError e) {
 			test.log(LogStatus.FAIL, "Searchfailed with following exception: " + e.getMessage());
 		}
 		return product;
@@ -97,6 +98,7 @@ public class SearchPage extends TestBase {
 			System.out.println(pricetype.get(0).getAttribute("content-desc").toString());
 			price = (pricetype.get(0).getAttribute("content-desc")).toString();
 			webDriverWaitAndClick(pricetype.get(0));
+			test.log(LogStatus.PASS,"Verify search product");
 		} catch (Exception | AssertionError e) {
 		}
 		return price;
@@ -147,6 +149,8 @@ public class SearchPage extends TestBase {
 			Log.info("Low Product Price is: " + low_price + " Product name is: " + map_final_products.get(low_price));
 		    assertTrue(high_price!=null);
 		    assertTrue(low_price!=null);
+			test.log(LogStatus.PASS,"Compare price");
+			
 		} catch (Exception | AssertionError e) {
 			Log.info(e.getMessage());
 		}

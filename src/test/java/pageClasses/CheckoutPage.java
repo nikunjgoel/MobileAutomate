@@ -65,7 +65,7 @@ public class CheckoutPage extends TestBase {
 			Log.info(shippingpageproductxpath.getAttribute("text").toString());
 			assertTrue(product.equalsIgnoreCase(shippingpageproductxpath.getAttribute("text").toString()));
 			Log.info("Product compare successfully in checkout page");
-			test.log(LogStatus.PASS, "All the LLD and IR files downloaded successfully.");
+			test.log(LogStatus.PASS, "Item added successfully to the cart and verify search product in checkout page");
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "Fail to add item:" + e.getMessage());
 		}

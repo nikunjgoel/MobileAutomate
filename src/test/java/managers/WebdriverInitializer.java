@@ -32,7 +32,7 @@ public class WebdriverInitializer {
 			capabilities.setCapability("app", app.getAbsolutePath());
 			capabilities.setCapability("appPackage", "com.amazon.mShop.android.shopping");
 			capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
-			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+			driver = new AndroidDriver<WebElement>(new URL("http://127.0.1.1:4723/wd/hub"), capabilities);
 			driver.manage().timeouts().implicitlyWait(600, TimeUnit.SECONDS);
 			Log.info("App Launch");
 		} catch (Throwable e) {

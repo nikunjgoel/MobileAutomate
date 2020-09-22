@@ -75,7 +75,7 @@ public class TestContext {
 		Log.startLog("Logger started");
 
 		driver = new WebdriverInitializer().init_driver();
-		_test = _extent.startTest(GenUtility.getRandomAlphaNumString());
+		_test = _extent.startTest("AmazonApp_"+ GenUtility.getRandomAlphaNumString());
 		setPageObjectManager(new PageObjectManager(driver, _test));
 	}
 
