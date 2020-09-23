@@ -80,15 +80,15 @@ public class GenUtility {
 		String str = "" + System.currentTimeMillis() / 1000L;
 		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		char[] ch = new char[str.length()];
-		for (int i = 0; i < str.length(); i++) 
+		for (int i = 0; i < str.length(); i++)
 			ch[i] = str.charAt(i);
-		
+
 		for (int i = 0; i < ch.length; i++) {
 			int z = Integer.parseInt(String.valueOf(ch[i]));
 			if (i < 4) {
 				char s = SALTCHARS.charAt(z);
 				newStr += s;
-			} else 
+			} else
 				newStr += ch[i];
 		}
 		return newStr;
@@ -110,7 +110,7 @@ public class GenUtility {
 		return part1;
 	}
 
-		public static boolean releaseChromeServerProcess(String taskName) {
+	public static boolean releaseChromeServerProcess(String taskName) {
 		boolean flag = false;
 		try {
 			// Run Task manager
@@ -128,7 +128,8 @@ public class GenUtility {
 				}
 				/*
 				 * if(processName[0].equals("javaw.exe"))
-				 * Runtime.getRuntime().exec("taskkill /F /IM " + processName[0]);
+				 * Runtime.getRuntime().exec("taskkill /F /IM " +
+				 * processName[0]);
 				 */
 				// System.out.println("Memory Released");
 			}
@@ -138,45 +139,6 @@ public class GenUtility {
 			e.printStackTrace();
 		}
 		return flag;
-	}
-
-
-	public static HashMap<String, String> getData(String sheetName, XlsReader _xls) {
-
-		int testStartRowNum = 0;
-
-		int colStartRowNum = testStartRowNum + 1;
-		int totalCols = 0;
-		while (!_xls.getCellData(sheetName, totalCols, colStartRowNum).equals("")) {
-			totalCols++;
-		}
-
-		// rows
-		int dataStartRowNum = testStartRowNum + 1;
-		totalRows = 0;
-		while (!_xls.getCellData(sheetName, 0, dataStartRowNum + totalRows).equals("")) {
-			totalRows++;
-		}
-
-		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		// extract data
-		// Object[][] data = new Object[totalRows][1];
-		// int index = 0;
-		HashMap<String, String> _map = null;
-		for (int rNum = dataStartRowNum; rNum < (dataStartRowNum + totalRows); rNum++) {
-			_map = new HashMap<String, String>();
-			for (int cNum = 0; cNum < totalCols; cNum++) {
-				_map.put(_xls.getCellData(sheetName, cNum, colStartRowNum), _xls.getCellData(sheetName, cNum, rNum));
-				System.out.print(_xls.getCellData(sheetName, cNum, rNum) + " -- ");
-			}
-			// data[index][0] = _table;
-			// index++;
-			System.out.println();
-		}
-
-		System.out.println("done");
-
-		return _map;
 	}
 
 	public static String convertStringintoDecimaluptoTwoChars(String s) {
@@ -191,6 +153,7 @@ public class GenUtility {
 		return Double.parseDouble(s);
 
 	}
+
 	public static String takeScreenshot(RemoteWebDriver driver) {
 
 		String Path = System.getProperty("user.dir") + "\\screenshots\\" + "ED" + "_" + getDayWithSeconds() + ".jpeg";

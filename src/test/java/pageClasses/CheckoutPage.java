@@ -17,7 +17,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import helper.Constants;
 import helper.Log;
 import helper.TestBase;
-import helper.XlsReader;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -26,7 +25,6 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class CheckoutPage extends TestBase {
 	ExtentTest test;
 	WebDriverWait wait;
-	XlsReader xlsReader;
 
 	public CheckoutPage(AndroidDriver<WebElement> driver, ExtentTest test) {
 		super(driver, test);

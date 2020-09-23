@@ -15,7 +15,6 @@ cucumber\TestContext.class
 helper\Config.class
 helper\TestBase.class
 cucumber\ScenarioContext.class
-helper\XlsReader.class
 managers\PageObjectManager.class
 pageClasses\HomePage.class
 helper\fetchDatafromExcelColumnWise.class
