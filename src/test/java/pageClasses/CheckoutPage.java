@@ -1,23 +1,15 @@
 package pageClasses;
 
 import static org.testng.Assert.assertTrue;
-
 import java.util.Map;
-
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import helper.Constants;
 import helper.Log;
 import helper.TestBase;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -66,6 +58,7 @@ public class CheckoutPage extends TestBase {
 			test.log(LogStatus.PASS, "Item added successfully to the cart and verify search product in checkout page");
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "Fail to add item:" + e.getMessage());
+            throw e;
 		}
 	}
 

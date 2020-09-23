@@ -31,21 +31,15 @@ public class Hooks extends AbstractTestNGCucumberTests {
 
 package stepDefinition;
 
-import java.io.File;
-
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 import com.relevantcodes.extentreports.LogStatus;
-
 import cucumber.TestContext;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import helper.Config;
 import helper.GenUtility;
 import helper.Log;
+import managers.WebdriverInitializer;
+
 public class Hooks {
 	TestContext testContext;
 	public Hooks(TestContext context) {

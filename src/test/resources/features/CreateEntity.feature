@@ -7,8 +7,7 @@ Feature: Create Entity View And Upload functionality
     Then user Enter product in search details page
     Then user verify search result displayed in list and click the search data
     Then user checkout the selected item from checkout page
-     #And quit from the application
-
+    
     Examples: 
       | TestCaseName | TestSheetName |
       | SearchData   | UATSanity     |

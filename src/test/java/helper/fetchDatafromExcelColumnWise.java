@@ -16,7 +16,6 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.Test;
 
 public class fetchDatafromExcelColumnWise {
 
@@ -24,8 +23,6 @@ public class fetchDatafromExcelColumnWise {
 	List<XSSFCell> sheetHeader = new ArrayList<>();
 	Map<String, String> getTestdata = new HashMap<>();
 	private String workbook = null;
-	private String sheet = null;
-	private String workbookLLD = null;
 	
 	public Map<String, String> getTestData(String tcid, String sheet) throws Exception {
 

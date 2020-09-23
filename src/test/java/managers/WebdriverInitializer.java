@@ -3,13 +3,9 @@ package managers;
 import java.io.File;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.SkipException;
-
-import cucumber.TestContext;
 import helper.Log;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -33,7 +29,7 @@ public class WebdriverInitializer {
 			capabilities.setCapability("appPackage", "com.amazon.mShop.android.shopping");
 			capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
 			driver = new AndroidDriver<WebElement>(new URL("http://127.0.1.1:4723/wd/hub"), capabilities);
-			driver.manage().timeouts().implicitlyWait(600, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 			Log.info("App Launch");
 		} catch (Throwable e) {
 			throw new SkipException("issue while launching the browser" + e);

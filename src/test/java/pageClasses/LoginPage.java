@@ -1,17 +1,11 @@
 package pageClasses;
 
 import static org.testng.Assert.assertTrue;
-
-import java.awt.Menu;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import helper.Constants;
-import helper.GenUtility;
 import helper.Log;
 import helper.TestBase;
 import io.appium.java_client.android.AndroidDriver;
@@ -73,6 +67,7 @@ public class LoginPage extends TestBase {
 			System.out.println(e.getMessage());
 			test.log(LogStatus.FAIL,
 					"Home page is not loaded successfully with following exception: " + e.getMessage());
+			throw e;
 		}
 	}
 
@@ -106,6 +101,7 @@ public class LoginPage extends TestBase {
 			Log.info(e.getMessage());
 
 			test.log(LogStatus.FAIL, "Login error: " + e.getMessage());
+			throw e;
 		}
 	}
 
@@ -135,6 +131,7 @@ public class LoginPage extends TestBase {
 			Log.info(e.getMessage());
 
 			test.log(LogStatus.FAIL, "Login error: " + e.getMessage());
+			throw e;
 		}
 	}
 }

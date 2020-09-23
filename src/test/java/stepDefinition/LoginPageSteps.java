@@ -1,15 +1,10 @@
 package stepDefinition;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
 import cucumber.TestContext;
 import cucumber.api.java.en.When;
 import enums.Context;
-import helper.Config;
-import helper.TestBase;
 import pageClasses.LoginPage;
 
 public class LoginPageSteps {

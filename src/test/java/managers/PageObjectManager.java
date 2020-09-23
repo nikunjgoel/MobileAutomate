@@ -1,18 +1,12 @@
 package managers;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.relevantcodes.extentreports.ExtentTest;
-
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import pageClasses.SearchPage;
 import pageClasses.CheckoutPage;
 import pageClasses.HomePage;
 import pageClasses.LoginPage;
-import org.apache.log4j.Logger;
 
 public class PageObjectManager {
 

@@ -1,7 +1,6 @@
 package cucumber;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import helper.ExtentManager;
@@ -10,10 +9,7 @@ import helper.Log;
 import io.appium.java_client.android.AndroidDriver;
 import managers.PageObjectManager;
 import managers.WebdriverInitializer;
-
 import java.io.File;
-
-import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 public class TestContext {

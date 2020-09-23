@@ -39,10 +39,10 @@ public class GenUtility {
 		return date;
 	}
 
-	public static String takeScreenshot(AndroidDriver<WebElement> driver, String fileName) {
+	public static String takeScreenshot(AndroidDriver<WebElement> driver) {
 
-		String Path = System.getProperty("user.dir") + "\\screenshots\\" + fileName + "_" + getDayWithSeconds()
-				+ ".jpeg";
+		String Path = System.getProperty("user.dir") + "\\screenshots\\" + "_" + getDayWithSeconds() + ".jpeg";
+		
 		File srcFile = ((TakesScreenshot) (driver)).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(srcFile, new File(Path));
@@ -86,21 +86,6 @@ public class GenUtility {
 
 	}
 
-	public static String getSplittedStringFirstPart(String str, String splitPoint) {
-
-		String part1 = "";
-		String part2 = "";
-		try {
-			String[] parts = str.split(splitPoint);
-			part1 = parts[0];
-			part2 = parts[1];
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
-
-		return part1;
-	}
-
 	public static String convertStringintoDecimaluptoTwoChars(String s) {
 
 		double d = Double.parseDouble(s);
@@ -113,18 +98,4 @@ public class GenUtility {
 		return Double.parseDouble(s);
 
 	}
-
-	public static String takeScreenshot(RemoteWebDriver driver) {
-
-		String Path = System.getProperty("user.dir") + "\\screenshots\\" + "ED" + "_" + getDayWithSeconds() + ".jpeg";
-		File srcFile = ((TakesScreenshot) (driver)).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(srcFile, new File(Path));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return Path;
-	}
-
 }

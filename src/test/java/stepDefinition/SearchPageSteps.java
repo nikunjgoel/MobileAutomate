@@ -1,9 +1,7 @@
 package stepDefinition;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import cucumber.TestContext;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
