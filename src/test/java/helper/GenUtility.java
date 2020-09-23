@@ -1,27 +1,18 @@
 package helper;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Random;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import freemarker.core._DelayedFTLTypeDescription;
 import io.appium.java_client.android.AndroidDriver;
 
 public class GenUtility {
@@ -108,37 +99,6 @@ public class GenUtility {
 		}
 
 		return part1;
-	}
-
-	public static boolean releaseChromeServerProcess(String taskName) {
-		boolean flag = false;
-		try {
-			// Run Task manager
-			Process p = Runtime.getRuntime().exec("tasklist.exe");
-			// Get the list of processes in Task manager
-			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String line;
-			// Fetch each process
-			while ((line = input.readLine()) != null) {
-				String processName[] = line.split(" ");
-				// Compare it with Process name passed as argument and if found
-				// return true
-				if (processName[0].equals(taskName)) {
-					flag = true;
-				}
-				/*
-				 * if(processName[0].equals("javaw.exe"))
-				 * Runtime.getRuntime().exec("taskkill /F /IM " +
-				 * processName[0]);
-				 */
-				// System.out.println("Memory Released");
-			}
-			input.close();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return flag;
 	}
 
 	public static String convertStringintoDecimaluptoTwoChars(String s) {
